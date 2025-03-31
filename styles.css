@@ -1,0 +1,38 @@
+/* Classical Bible-inspired dark theme */
+body {
+    font-family: 'Georgia', serif;
+    text-align: center;
+    background-color: #82b0be;
+    color: #e7fa41; /* Gold text */
+    padding: 20px;
+}
+
+.container {
+    max-width: 600px;
+    margin: auto;
+    background: rgba(76, 84, 129, 0.85);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(94, 74, 165, 0.5); /* Gold glow */
+    border: 2px solid #253a7e;
+}
+
+h1 {
+    font-size: 1.8em;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+#verse-container {
+    margin: 20px 0;
+    font-size: 1.3em;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+p {
+    font-size: 1.2em;
+}
+
