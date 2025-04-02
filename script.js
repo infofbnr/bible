@@ -10,7 +10,7 @@ async function getVerse(forceUpdate = false) {
         const savedVerse = localStorage.getItem("verse");
         const savedReference = localStorage.getItem("reference");
         if (savedVerse && savedReference) {
-            document.getElementById("verse").textContent = `"${savedVerse}"`;
+            document.getElementById("verse").textContent = `${savedVerse}`;
             document.getElementById("reference").textContent = savedReference;
             return;
         }
