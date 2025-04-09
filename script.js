@@ -41,14 +41,23 @@ function copyVerse() {
     const reference = document.getElementById("reference").textContent;
     const combined = `${verse} ${reference}`;
     navigator.clipboard.writeText(combined)
-        .then(() => alert("Verse copied to clipboard!"));
+        .then(() => {
+            const notification = document.createElement("div");
+            notification.textContent = "Verse copied to clipboard!";
+            notification.classList.add("fixed", "top-5", "left-1/2", "transform", "-translate-x-1/2", "bg-green-500", "text-white", "py-2", "px-4", "rounded", "shadow-lg");
+            document.body.appendChild(notification);
+            setTimeout(() => notification.remove(), 2000);
+        })
+        .catch((error) => {
+            console.error('Error copying text: ', error);
+        });
 }
 
 function toggleDarkMode() {
     document.body.classList.toggle("dark");
     localStorage.setItem("darkMode", document.body.classList.contains("dark"));
+    console.log("Dark mode toggled:", document.body.classList.contains("dark"));
 }
-
 
 // Load on page load
 if (localStorage.getItem("darkMode") === "true") {
@@ -56,4 +65,3 @@ if (localStorage.getItem("darkMode") === "true") {
 }
 
 getVerse();
-renderHistory();

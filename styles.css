@@ -52,23 +52,31 @@ p {
 
 .buttons {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: nowrap; /* Prevent wrapping */
 }
 
 button {
-    margin: 0.3rem;
-    padding: 0.6rem 1rem;
-    font-size: 1em;
+    flex: 1;
+    max-width: 180px;
+    padding: 0.75rem 1.2rem;
+    font-size: 1rem;
     border: 2px solid #ffb6b6;
     background-color: transparent;
     color: #ffb6b6;
     border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
+    transition: background-color 0.2s, color 0.2s, transform 0.1s ease;
+    text-align: center;
 }
 
 button:hover {
     background-color: #ffb6b6;
     color: #2b2e4a;
+    transform: scale(1.03);
 }
 
 .dark button {
@@ -79,6 +87,18 @@ button:hover {
 .dark button:hover {
     background-color: #f5e6c8;
     color: #1c1e2f;
+}
+
+#verse-container {
+    margin: 20px 0;
+    font-size: 1.3em;
+    line-height: 1.6;
+    font-style: italic;
+    transition: transform 0.3s ease;
+}
+
+#verse-container:hover {
+    transform: scale(1.01);
 }
 
 #history-container {
@@ -111,3 +131,24 @@ button:hover {
     font-size: 1em;
     color: inherit;
 }
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 1.6em;
+    }
+
+    #verse-container {
+        font-size: 1.2em;
+    }
+
+    #reference {
+        font-size: 1em;
+    }
+
+    button {
+        font-size: 1.05em;
+        min-width: 100px;
+        padding: 0.9rem 1rem;
+    }
+}
+

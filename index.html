@@ -4,22 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Daily Bible Verse</title>
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body.dark {
+            background-color: #1c1e2f;
+            color: #f5e6c8;
+        }
+        body {
+            font-family: 'Merriweather', serif;
+        }
+    </style>
 </head>
-<body>
-    <div class="container">
-        <h1>📖 Daily Bible Verse</h1>
-        <div id="verse-container">
-            <p id="verse">Loading...</p>
-            <p id="reference"></p>
+<body class="bg-[#82b0be] text-[#ffb6b6] p-5 transition-all">
+    <div class="max-w-2xl mx-auto bg-[#4c547f] bg-opacity-85 p-8 rounded-xl shadow-xl border-2 border-[#253a7e] transition-all">
+        <h1 class="text-2xl font-bold text-center uppercase tracking-wider mb-6">📖 Daily Bible Verse</h1>
+        <div id="verse-container" class="my-5 text-lg italic leading-relaxed">
+            <p id="verse" class="text-lg">Loading...</p>
+            <p id="reference" class="mt-2 font-semibold text-xl"></p>
         </div>
-
-        <div class="buttons">
-            <button onclick="getVerse(true)">🔁 Get New Verse</button>
-            <button onclick="copyVerse()">📋 Copy</button>
-            <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+        <div class="flex justify-center items-center gap-4 mt-6 flex-wrap">
+            <button onclick="copyVerse()" class="px-4 py-2 bg-transparent border-2 border-[#ffb6b6] text-[#ffb6b6] rounded-lg hover:bg-[#ffb6b6] hover:text-[#2b2e4a] transition-all transform hover:scale-105 text-center">
+                📋 Copy
+            </button>
+            <button onclick="toggleDarkMode()" class="px-4 py-2 bg-transparent border-2 border-[#ffb6b6] text-[#ffb6b6] rounded-lg hover:bg-[#ffb6b6] hover:text-[#2b2e4a] transition-all transform hover:scale-105 text-center">
+                🌙 Toggle Dark Mode
+            </button>
         </div>
-
     </div>
 
     <script src="script.js"></script>
