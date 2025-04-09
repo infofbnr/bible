@@ -1,27 +1,35 @@
-/* Classical Bible-inspired dark theme */
+/* Classical Bible-inspired theme with better layout and feature support */
 body {
     font-family: 'Georgia', serif;
     text-align: center;
     background-color: #82b0be;
-    color: #e7fa41; /* Gold text */
+    color: #ffb6b6;
     padding: 20px;
+    margin: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+.dark {
+    background-color: #1c1e2f;
+    color: #f5e6c8;
 }
 
 .container {
-    max-width: 600px;
+    max-width: 700px;
     margin: auto;
     background: rgba(76, 84, 129, 0.85);
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(94, 74, 165, 0.5); /* Gold glow */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 18px rgba(94, 74, 165, 0.5);
     border: 2px solid #253a7e;
+    transition: background 0.3s, box-shadow 0.3s;
 }
 
 h1 {
-    font-size: 1.8em;
+    font-size: 2em;
     font-weight: bold;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
     margin-bottom: 20px;
 }
 
@@ -32,7 +40,74 @@ h1 {
     font-style: italic;
 }
 
+#reference {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
 p {
     font-size: 1.2em;
 }
 
+.buttons {
+    margin-top: 20px;
+}
+
+button {
+    margin: 0.3rem;
+    padding: 0.6rem 1rem;
+    font-size: 1em;
+    border: 2px solid #ffb6b6;
+    background-color: transparent;
+    color: #ffb6b6;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+button:hover {
+    background-color: #ffb6b6;
+    color: #2b2e4a;
+}
+
+.dark button {
+    border-color: #f5e6c8;
+    color: #f5e6c8;
+}
+
+.dark button:hover {
+    background-color: #f5e6c8;
+    color: #1c1e2f;
+}
+
+#history-container {
+    margin-top: 30px;
+    text-align: left;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.dark #history-container {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+#history-container h2 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#history {
+    list-style: none;
+    padding: 0;
+}
+
+#history li {
+    margin-bottom: 10px;
+    font-style: italic;
+    font-size: 1em;
+    color: inherit;
+}
